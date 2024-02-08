@@ -104,7 +104,7 @@ void buttonNumberConfirm(int* robotJoints, int clientID) {
     }
     extApi_sleepMs(2000);
 }
-void posicaoPadrao(int* robotJoints, int clientID) {
+void deafultPosition(int* robotJoints, int clientID) {
     float positionsJoints[6] = { (simxFloat) 0, (simxFloat) 0, (simxFloat) -PI/5 };
     simxSetJointTargetPosition(clientID, robotJoints[1], (simxFloat)0, simx_opmode_oneshot_wait);
     extApi_sleepMs(500);
@@ -146,15 +146,6 @@ int main(int argc, char* argv[])
         sprintf(jointName, "/base_link_respondable[0]/joint_%d", k + 1);
         simxGetObjectHandle(clientID, jointName, &robotJoints[k], simx_opmode_oneshot_wait);
     }
-
-    //Utilizado para simular a função da posição padrão do robo ou de recuo enquanto ela não esta pronta,depois sera apagado
-    int handler = 0;
-    simxChar handlerName[150] = "/base_link_respondable[0]/joint_3";
-    simxGetObjectHandle(clientID, handlerName, &handler, (simxInt)simx_opmode_oneshot_wait);
-    simxSetJointTargetPosition(clientID, handler, (simxFloat)-0.177 * PI, (simxInt)simx_opmode_oneshot_wait);
-    extApi_sleepMs(7000);
-
-    buttonNumber6(robotJoints, clientID);
     extApi_sleepMs(800);
 
     // Fechar a conexão

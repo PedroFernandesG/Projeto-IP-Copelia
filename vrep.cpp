@@ -11,21 +11,45 @@ extern "C" {
 }
 
 //Funções utilizadas para selecionar as teclas
-void buttonNumber5(int* robotJoints, int clientID) {
-    float positionsJoints[6] = {(simxFloat)0.05,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
+void buttonNumber1(int* robotJoints, int clientID) {
+    float positionsJoints[6] = { (simxFloat)0.14, (simxFloat)-0.51, (simxFloat)-0.115 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(7000);
 }
+void buttonNumber2(int* robotJoints, int clientID) {
+    float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.5,(simxFloat)-0.115 * PI };
+    for (int i = 0; i < 3;i++) {
+        simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
+        extApi_sleepMs(500);
+    }
+    extApi_sleepMs(7000);
+}
+void buttonNumber3(int* robotJoints, int clientID) {
+    float positionsJoints[6] = { (simxFloat)-0.02,(simxFloat)-0.5,(simxFloat)-0.115 * PI };
+    for (int i = 0; i < 3;i++) {
+        simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
+        extApi_sleepMs(500);
+    }
+    extApi_sleepMs(7000);
+} 
 void buttonNumber4(int* robotJoints, int clientID) {
     float positionsJoints[6] = { (simxFloat)0.1,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(7000);
+}
+void buttonNumber5(int* robotJoints, int clientID) {
+    float positionsJoints[6] = {(simxFloat)0.05,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
+    for (int i = 0; i < 3;i++) {
+        simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
+        extApi_sleepMs(500);
+    }
+    extApi_sleepMs(7000);
 }
 void buttonNumber6(int* robotJoints, int clientID) {
     float positionsJoints[6] = { (simxFloat)-0.05,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
@@ -33,7 +57,7 @@ void buttonNumber6(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(7000);
 }
 
 void buttonNumber7(int* robotJoints, int clientID) {
@@ -42,7 +66,7 @@ void buttonNumber7(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(7000);
 }
 
 void buttonNumber8(int* robotJoints, int clientID) {
@@ -51,7 +75,7 @@ void buttonNumber8(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(7000);
 }
 
 void buttonNumber9(int* robotJoints, int clientID) {
@@ -60,7 +84,7 @@ void buttonNumber9(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(7000);
 }
 
 void buttonNumber0(int *robotJoints,int clientID){
@@ -80,7 +104,16 @@ void buttonNumberConfirm(int* robotJoints, int clientID) {
     }
     extApi_sleepMs(2000);
 }
-
+void posicaoPadrao(int* robotJoints, int clientID) {
+    float positionsJoints[6] = { (simxFloat) 0, (simxFloat) 0, (simxFloat) -PI/5 };
+    simxSetJointTargetPosition(clientID, robotJoints[1], (simxFloat)0, simx_opmode_oneshot_wait);
+    extApi_sleepMs(500);
+    for (int i = 2; i >= 0;i--) {
+        simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
+        extApi_sleepMs(500);
+    }
+    extApi_sleepMs(2000);
+}
 int main(int argc, char* argv[])
 {
 

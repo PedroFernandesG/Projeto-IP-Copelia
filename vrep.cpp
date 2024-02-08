@@ -37,7 +37,7 @@ void buttonNumber6(int* robotJoints, int clientID) {
 }
 
 void buttonNumber0(int *robotJoints,int clientID){
-    float positionsJoints[6] = {(simxFloat) 0.01 * PI,(simxFloat)-0.162 * PI,(simxFloat)0};
+    float positionsJoints[6] = {(simxFloat) 0.01 * PI,(simxFloat)-0.165 * PI,(simxFloat) -0.180 * PI};
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);

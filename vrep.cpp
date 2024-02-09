@@ -163,6 +163,8 @@ int main(int argc, char* argv[])
   
         for(indexRow = 0;indexRow < strlen(linhaArquivo);indexRow++){
 
+            defaultPosition(robotJoints, clientID);
+            extApi_sleepMs(6000);
             if(linhaArquivo[indexRow] == '0') {
                 buttonNumber0(robotJoints, clientID);
                 defaultPosition(robotJoints, clientID);

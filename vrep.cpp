@@ -10,14 +10,14 @@ extern "C" {
 #include "extApi.h"
 }
 
-//Funções utilizadas para selecionar as teclas
+//Funções utilizadas para selecionar as teclas com suas respectivas posições
 void buttonNumber1(int* robotJoints, int clientID) {
     float positionsJoints[6] = { (simxFloat)0.14, (simxFloat)-0.51, (simxFloat)-0.115 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
+    extApi_sleepMs(1500);
 }
 void buttonNumber2(int* robotJoints, int clientID) {
     float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.5,(simxFloat)-0.115 * PI };
@@ -25,7 +25,7 @@ void buttonNumber2(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
+    extApi_sleepMs(1500);
 }
 void buttonNumber3(int* robotJoints, int clientID) {
     float positionsJoints[6] = { (simxFloat)-0.02,(simxFloat)-0.5,(simxFloat)-0.115 * PI };
@@ -33,23 +33,23 @@ void buttonNumber3(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
-} 
+    extApi_sleepMs(1500);
+}
 void buttonNumber4(int* robotJoints, int clientID) {
     float positionsJoints[6] = { (simxFloat)0.1,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
+    extApi_sleepMs(1500);
 }
 void buttonNumber5(int* robotJoints, int clientID) {
-    float positionsJoints[6] = {(simxFloat)0.05,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
+    float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
+    extApi_sleepMs(1500);
 }
 void buttonNumber6(int* robotJoints, int clientID) {
     float positionsJoints[6] = { (simxFloat)-0.05,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
@@ -57,7 +57,7 @@ void buttonNumber6(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
+    extApi_sleepMs(1500);
 }
 
 void buttonNumber7(int* robotJoints, int clientID) {
@@ -66,7 +66,7 @@ void buttonNumber7(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
+    extApi_sleepMs(1500);
 }
 
 void buttonNumber8(int* robotJoints, int clientID) {
@@ -75,7 +75,7 @@ void buttonNumber8(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
+    extApi_sleepMs(1500);
 }
 
 void buttonNumber9(int* robotJoints, int clientID) {
@@ -84,16 +84,16 @@ void buttonNumber9(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(7000);
+    extApi_sleepMs(1500);
 }
 
-void buttonNumber0(int *robotJoints,int clientID){
-    float positionsJoints[6] = {(simxFloat) 0.01 * PI,(simxFloat)-0.165 * PI,(simxFloat) -0.180 * PI};
+void buttonNumber0(int* robotJoints, int clientID) {
+    float positionsJoints[6] = { (simxFloat)0.01 * PI,(simxFloat)-0.165 * PI,(simxFloat)-0.180 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(1500);
 }
 
 void buttonNumberConfirm(int* robotJoints, int clientID) {
@@ -102,30 +102,29 @@ void buttonNumberConfirm(int* robotJoints, int clientID) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(1500);
 }
-void deafultPosition(int* robotJoints, int clientID) {
-    float positionsJoints[6] = { (simxFloat) 0, (simxFloat) 0, (simxFloat) -PI/5 };
+void defaultPosition(int* robotJoints, int clientID) {
+    float positionsJoints[6] = { (simxFloat)0, (simxFloat)0, (simxFloat)-PI / 5 };
     simxSetJointTargetPosition(clientID, robotJoints[1], (simxFloat)0, simx_opmode_oneshot_wait);
     extApi_sleepMs(500);
     for (int i = 2; i >= 0;i--) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
     }
-    extApi_sleepMs(2000);
+    extApi_sleepMs(1500);
+}
+
+void InitialPosition(int* robotJoints, int clientID) {
+    float positionsJoints[6] = { (simxFloat)0 * PI,(simxFloat)0 * PI,(simxFloat)0 * PI };
+    for (int i = 0; i < 3;i++) {
+        simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
+        extApi_sleepMs(500);
+    }
+    extApi_sleepMs(1500);
 }
 int main(int argc, char* argv[])
 {
-
-    /*
-    FILE* arquivo = NULL;
-    arquivo = fopen("arquivo.txt", "r");
-    if (arquivo == NULL){
-        printf("Erro na leitura de dados");
-        exit(1);
-    }
-    */
-
     // Conectar-se ao CoppeliaSim
     int clientID = simxStart((simxChar*)"127.0.0.1", 19999, true, true, 2000, 5);
     extApi_sleepMs(500);
@@ -141,12 +140,78 @@ int main(int argc, char* argv[])
 
     //Colocando as juntas do robo em um vetor
     int robotJoints[6];
-    for(int k = 0;k < 6;k++){
+    for (int k = 0;k < 6;k++) {
         char jointName[70];
         sprintf(jointName, "/base_link_respondable[0]/joint_%d", k + 1);
         simxGetObjectHandle(clientID, jointName, &robotJoints[k], simx_opmode_oneshot_wait);
     }
     extApi_sleepMs(800);
+
+    
+    //Abrindo um arquivo com os votos
+    FILE* arquivo = NULL;
+    arquivo = fopen("votos.txt", "r");
+    if (arquivo == NULL) {
+        printf("Erro na leitura de dados");
+        exit(1);
+    }
+
+    char linhaArquivo[100];
+    int indexRow = 0;
+    //Loop que percorre cada linha arquivo e digita os votos na urna
+    while (fgets(linhaArquivo, 100, arquivo) != NULL) {
+  
+        for(indexRow = 0;indexRow < strlen(linhaArquivo);indexRow++){
+
+            if(linhaArquivo[indexRow] == '0') {
+                buttonNumber0(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '1') {
+                buttonNumber1(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '2') {
+                buttonNumber2(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '3') {
+                buttonNumber3(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '4') {
+                buttonNumber4(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '5') {
+                buttonNumber5(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '6') {
+                buttonNumber6(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '7') {
+                buttonNumber7(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '8') {
+                buttonNumber8(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+            else if (linhaArquivo[indexRow] == '9') {
+                buttonNumber9(robotJoints, clientID);
+                defaultPosition(robotJoints, clientID);
+            }
+       
+        }
+        buttonNumberConfirm(robotJoints, clientID);
+        defaultPosition(robotJoints, clientID);
+    }
+    
+    InitialPosition(robotJoints, clientID);
+
+    fclose(arquivo);
 
     // Fechar a conexão
     simxFinish(clientID);

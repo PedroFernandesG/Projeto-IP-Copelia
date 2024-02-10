@@ -172,14 +172,15 @@ int main(int argc, char* argv[])
 
     char linhaArquivo[100];
     int indexRow = 0;
+
+     defaultPosition(robotJoints, clientID);
+     extApi_sleepMs(6000);
     //Loop que percorre cada linha arquivo e digita os votos na urna
     while (fgets(linhaArquivo, 100, arquivo) != NULL){
 
         //Pressiona cada digito com base nos numeros de cada linha
         for (indexRow = 0;indexRow < strlen(linhaArquivo);indexRow++) {
 
-            defaultPosition(robotJoints, clientID);
-            extApi_sleepMs(6000);
             if (linhaArquivo[indexRow] == '0') {
                 buttonNumber0(robotJoints, clientID);
                 defaultPosition(robotJoints, clientID);

@@ -22,7 +22,7 @@ void buttonNumber1(int* robotJoints, int clientID){
 }
 void buttonNumber2(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.5,(simxFloat)-0.115 * PI };
+    float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.5,(simxFloat)-0.116 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -40,7 +40,7 @@ void buttonNumber3(int* robotJoints, int clientID){
 }
 void buttonNumber4(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)0.1,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
+    float positionsJoints[6] = { (simxFloat)0.1,(simxFloat)-0.52,(simxFloat)-0.143 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -49,7 +49,7 @@ void buttonNumber4(int* robotJoints, int clientID){
 }
 void buttonNumber5(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
+    float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.51,(simxFloat)-0.143 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -58,7 +58,7 @@ void buttonNumber5(int* robotJoints, int clientID){
 }
 void buttonNumber6(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)-0.05,(simxFloat)-0.50,(simxFloat)-0.143 * PI };
+    float positionsJoints[6] = { (simxFloat)-0.05,(simxFloat)-0.51,(simxFloat)-0.143 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -68,7 +68,7 @@ void buttonNumber6(int* robotJoints, int clientID){
 
 void buttonNumber7(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)0.12,(simxFloat)-0.50,(simxFloat)-0.16 * PI };
+    float positionsJoints[6] = { (simxFloat)0.12,(simxFloat)-0.527,(simxFloat)-0.158 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -78,7 +78,7 @@ void buttonNumber7(int* robotJoints, int clientID){
 
 void buttonNumber8(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.50,(simxFloat)-0.16 * PI };
+    float positionsJoints[6] = { (simxFloat)0.05,(simxFloat)-0.515,(simxFloat)-0.160 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -88,7 +88,7 @@ void buttonNumber8(int* robotJoints, int clientID){
 
 void buttonNumber9(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)-0.05,(simxFloat)-0.50,(simxFloat)-0.16 * PI };
+    float positionsJoints[6] = { (simxFloat)-0.05,(simxFloat)-0.519,(simxFloat)-0.161 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -98,7 +98,7 @@ void buttonNumber9(int* robotJoints, int clientID){
 
 void buttonNumber0(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)0.01 * PI,(simxFloat)-0.165 * PI,(simxFloat)-0.180 * PI };
+    float positionsJoints[6] = { (simxFloat)0.01 * PI,(simxFloat)-0.172 * PI,(simxFloat)-0.178 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -108,7 +108,7 @@ void buttonNumber0(int* robotJoints, int clientID){
 
 void buttonNumberConfirm(int* robotJoints, int clientID){
     //Definindo e depois percorrendo as alterações angulares das tres primeiras juntas
-    float positionsJoints[6] = { (simxFloat)-0.03 * PI,(simxFloat)-0.170 * PI,(simxFloat)-0.190 * PI };
+    float positionsJoints[6] = { (simxFloat)-0.03 * PI,(simxFloat)-0.1765 * PI,(simxFloat)-0.1842 * PI };
     for (int i = 0; i < 3;i++) {
         simxSetJointTargetPosition(clientID, robotJoints[i], positionsJoints[i], (simxInt)simx_opmode_oneshot_wait);
         extApi_sleepMs(500);
@@ -160,7 +160,6 @@ int main(int argc, char* argv[])
     }
     extApi_sleepMs(800);
 
-
     //Abrindo um arquivo com os votos
     FILE* arquivo = NULL;
     arquivo = fopen("votos.txt", "r");
@@ -173,8 +172,9 @@ int main(int argc, char* argv[])
     char linhaArquivo[100];
     int indexRow = 0;
 
-     defaultPosition(robotJoints, clientID);
-     extApi_sleepMs(6000);
+    
+    defaultPosition(robotJoints, clientID);
+    extApi_sleepMs(6000);
     //Loop que percorre cada linha arquivo e digita os votos na urna
     while (fgets(linhaArquivo, 100, arquivo) != NULL){
 

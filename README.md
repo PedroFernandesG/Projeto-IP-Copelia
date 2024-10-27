@@ -1,6 +1,7 @@
 # Projeto-IP-Copelia
-Repositório utilizado para o desenvolvimento de um projeto de programação para o simulador de robótica CoppeliaSim
 
-Nome arquivo Coppelia:"Urna e Terminal"
+Repository used to develop a programming project for the CoppeliaSim robotics simulator
 
-Coordenada Robo = (0.2450,0.0423,0.9480)
+Coppelia file name: ‘Urn and Terminal’
+
+Robo coordinate = (0.2450,0.0423,0.9480)
